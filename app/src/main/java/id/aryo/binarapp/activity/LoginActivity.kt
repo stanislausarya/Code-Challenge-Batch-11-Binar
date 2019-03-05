@@ -43,6 +43,7 @@ class LoginActivity : AppCompatActivity() {
 
         ib_backLogin.setOnClickListener {
             startActivity(Intent(baseContext, WelcomeActivity::class.java))
+            finish()
         }
     }
 
@@ -85,6 +86,7 @@ class LoginActivity : AppCompatActivity() {
         PreferenceHelper.setLoggedInUser(baseContext, PreferenceHelper.getRegisteredUser(baseContext))
         PreferenceHelper.setLoggedInStatus(baseContext, true)
         startActivity(Intent(baseContext, MainActivity::class.java))
+        finish()
     }
 
     private fun cekPassword(password: String): Boolean {

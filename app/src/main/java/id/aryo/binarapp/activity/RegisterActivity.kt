@@ -50,6 +50,7 @@ class RegisterActivity : AppCompatActivity() {
 
         ib_backRegister.setOnClickListener {
             startActivity(Intent(baseContext, WelcomeActivity::class.java))
+            finish()
         }
     }
     private fun razia() {
@@ -94,6 +95,7 @@ class RegisterActivity : AppCompatActivity() {
             PreferenceHelper.setRegisteredPass(baseContext, password)
             PreferenceHelper.setRegisteredDomain(baseContext, domain)
             PreferenceHelper.setRegisteredUser(baseContext, user)
+            startActivity(Intent(baseContext, LoginActivity::class.java))
             finish()
         }
     }

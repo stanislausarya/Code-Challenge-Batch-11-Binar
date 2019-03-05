@@ -14,9 +14,11 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
         btn_register.setOnClickListener {
             startActivity(Intent(baseContext, RegisterActivity::class.java))
+            finish()
         }
         btn_login.setOnClickListener {
             startActivity(Intent(baseContext, LoginActivity::class.java))
+            finish()
         }
     }
 
@@ -29,4 +31,3 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
 }
-
